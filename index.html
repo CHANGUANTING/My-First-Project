@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公司基本面分析</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>公司基本面分析</h1>
+    <div class="toolbar">
+      <button type="button" id="btnAddCompany" class="primary">＋ 新增公司</button>
+      <button type="button" id="btnSample">载入示例数据</button>
+      <button type="button" id="btnExport">导出 JSON</button>
+      <button type="button" id="btnImport">导入 JSON</button>
+      <input type="file" id="fileImport" accept=".json,application/json" hidden>
+    </div>
+  </header>
+
+  <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>公司列表</h2>
+      <ul id="companyList" class="company-list"></ul>
+      <p class="hint">数据只保存在本浏览器（localStorage）。清除浏览器数据前请先导出 JSON 备份。</p>
+    </aside>
+    <main id="main"></main>
+  </div>
+
+  <script src="js/vendor/chart.umd.min.js"></script>
+  <script src="js/calc.js"></script>
+  <script src="js/risks.js"></script>
+  <script src="js/format.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
